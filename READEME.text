@@ -1,0 +1,28 @@
+smooth scrolling
+steps
+-- attach loco scroll css
+-- attach locomotive scroll min js
+-- some code from loco github for js
+
+
+gsap
+steps
+--attach gsap
+--
+
+scrolltrigger
+
+
+   window.addEventListener("mousemove",function(dets){
+       var xdiff = dets.clientX - xprev;
+       var ydiff = dets.clientY - yprev;
+
+        xscale = gsap.util.clamp(.8,1.2,xdiff);
+        yscale =  gsap.utli.clamp(.8,1.2, ydiff);
+        
+        xprev = dets.clientX;
+        yprev = dets.clientY;
+
+        circleMouseFollower(xscale,yscale);
+    });
+}
